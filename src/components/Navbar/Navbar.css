@@ -1,0 +1,11 @@
+.navbar{
+    height:3rem;
+    background-color:#9d6b53;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.Link{
+    color: white;
+    text-decoration: none;
+}
