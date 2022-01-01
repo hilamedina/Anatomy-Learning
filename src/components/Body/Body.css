@@ -2,6 +2,17 @@
     border:orangered 2px solid;
     display:flex;
     width: 50%;
-    margin-left:50% ;
-    
+    /* margin-bottom: 40%; */
+    margin-left:50% ;   
 }
+#hila{
+    border:blue 5px solid;
+}
+
+g:hover {
+    opacity:0.5;
+}
+g {
+    opacity:1;
+}
+
