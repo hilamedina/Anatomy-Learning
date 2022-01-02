@@ -19,13 +19,14 @@ const SvgComponent = (props) => {
         console.log('error');
       });
   };
-  // const getOrganInfo = (organ) => {
-  //   getData();
-  //   organs.map((organName) => {
-  //     console.log(organName.name);
-  //   });
-  //   // console.log(organs);
-  // };
+  const getOrganInfo = (organ) => {
+    console.log(organ);
+    getData();
+    // organs.map((organName) => {
+    //   console.log(organName.name);
+    // });
+    // console.log(organs);
+  };
 
   return (
     <div className="Organs">
