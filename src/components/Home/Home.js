@@ -3,7 +3,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
-import Body from '../Body/Body';
+import AnatomyManger from '../AnatomyManger/AnatomyManger';
 
 import './Home.css';
 
@@ -12,7 +12,7 @@ function Home() {
     <div className="Home">
       <BrowserRouter>
         <Navbar></Navbar>
-        <Body />
+        <AnatomyManger />
       </BrowserRouter>
     </div>
   );
