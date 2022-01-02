@@ -1,33 +1,50 @@
 import './Body.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const SvgComponent = (props) => {
-  const [organs, setOrgans] = useState('');
+  const [organs, setOrgans] = useState([]);
+  useEffect(() => {
+    getData();
+  }, []);
   const getData = () => {
+    console.log('organsData.data');
     axios
       //axios.get ==> put the url of my mocked api
       .get('https://61c7b1a2903185001754749c.mockapi.io/products')
       .then((organsData) => {
         //use what we get in axios.get
-        // console.log(organsData.data);
-        // console.log(organsData.data.name);
         setOrgans(organsData.data);
-        // return organsData.data;
       })
       .catch((error) => {
         console.log('error');
       });
   };
   const getOrganInfo = (organ) => {
-    console.log(organ);
-    getData();
-    // organs.map((organName) => {
-    //   console.log(organName.name);
-    // });
-    // console.log(organs);
+    const nameFind = organs.find((organName) => {
+      return organName.name === organ;
+    });
+    console.log(nameFind);
   };
+  // console.log(organs);
+  // console.log(organ);
+  // return organs.map((organName) => {
+  // console.log('hila', organName.name === organ);
 
+  // switch (organName.name) {
+  //   case 'liver':
+  //     console.log('this is liver link');
+  //     break;
+  //   case 'brain':
+  //     console.log('this is brain link');
+  //     break;
+  //   case 'kidneys':
+  //     console.log('this is kidneys link');
+  //     break;
+  // }
+  // console.log(organName.name);
+  // if (organName.name === 'liver') {
+  // });
   return (
     <div className="Organs">
       <svg
