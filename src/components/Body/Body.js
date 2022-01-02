@@ -1,5 +1,5 @@
 import './Body.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const SvgComponent = (props) => {
@@ -19,13 +19,13 @@ const SvgComponent = (props) => {
         console.log('error');
       });
   };
-  const getOrganInfo = (organ) => {
-    getData();
-    organs.map((organName) => {
-      console.log(organName.name);
-    });
-    // console.log(organs);
-  };
+  // const getOrganInfo = (organ) => {
+  //   getData();
+  //   organs.map((organName) => {
+  //     console.log(organName.name);
+  //   });
+  //   // console.log(organs);
+  // };
 
   return (
     <div className="Organs">
