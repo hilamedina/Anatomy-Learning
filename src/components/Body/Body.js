@@ -1,7 +1,7 @@
 import './Body.css';
 import React from 'react';
-import { getOrganInfo } from '../Data/Data';
-import Organ from '../Organ/Organ';
+// import { getOrganInfo } from '../Data/Data';
+// import Organ from '../Organ/Organ';
 // import axios from 'axios';
 
 const Body = (props) => {

@@ -10,6 +10,9 @@ export default function Organ(props) {
       <button className="Button" onClick={() => props.changeView()}>
         ⮐
       </button>
+      <button className="Button" onClick={() => props.changeView()}>
+        ䷢
+      </button>
     </div>
   );
 }
