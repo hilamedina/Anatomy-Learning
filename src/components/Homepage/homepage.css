@@ -1,0 +1,10 @@
+.Homepage-Div{
+    display:flex;
+    justify-content: space-between;
+}
+.Image-Homepage{
+    width:40%;
+}
+.Text-Homepage{
+    width:60%;
+}

@@ -20,33 +20,7 @@ const Body = (props) => {
   //     })
   //     .catch((error) => {
   //       console.log('error');
-  //     });
-  // };
-  // const getOrganInfo = (organ) => {
-  //   const nameFind = organs.find((organName) => {
-  //     return organName.name === organ;
-  //   });
-  //   console.log(nameFind);
-  // };
-  // console.log(organs);
-  // console.log(organ);
-  // return organs.map((organName) => {
-  // console.log('hila', organName.name === organ);
 
-  // switch (organName.name) {
-  //   case 'liver':
-  //     console.log('this is liver link');
-  //     break;
-  //   case 'brain':
-  //     console.log('this is brain link');
-  //     break;
-  //   case 'kidneys':
-  //     console.log('this is kidneys link');
-  //     break;
-  // }
-  // console.log(organName.name);
-  // if (organName.name === 'liver') {
-  // });
   console.log('render body');
   return (
     <div>

@@ -8,8 +8,8 @@ function Navbar() {
       <Link className="Link" to="/Login">
         Log in
       </Link>
-      <Link className="Link" to="/Body">
-        Body
+      <Link className="Link" to="/AnatomyManger">
+        Learn Anatomy
       </Link>
       <Link className="Link" to="/">
         Homepage
