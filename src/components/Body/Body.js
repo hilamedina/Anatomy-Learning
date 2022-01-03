@@ -5,22 +5,6 @@ import Organ from '../Organ/Organ';
 // import axios from 'axios';
 
 const Body = (props) => {
-  // const [organs, setOrgans] = useState([]);
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-  // const getData = async () => {
-  //   console.log('organsData.data');
-  //   axios
-  //     //axios.get ==> put the url of my mocked api
-  //     .get('https://61c7b1a2903185001754749c.mockapi.io/products')
-  //     .then((organsData) => {
-  //       //use what we get in axios.get
-  //       setOrgans(organsData.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log('error');
-
   console.log('render body');
   return (
     <div>

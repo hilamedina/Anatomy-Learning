@@ -14,6 +14,9 @@ function Navbar() {
       <Link className="Link" to="/">
         Homepage
       </Link>
+      <Link className="Link" to="/Progress">
+        Progress
+      </Link>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import AnatomyManger from '../AnatomyManger/AnatomyManger';
 import Homepage from '../Homepage/Homepage';
+import Progress from '../Progress/Progress';
 import './Home.css';
 // import Body from '../Body/Body';
 
@@ -20,6 +21,7 @@ function Home() {
           exact
           component={AnatomyManger}
         ></Route>
+        <Route exact path="/Progress" exact component={Progress}></Route>
         {/* <AnatomyManger /> */}
       </BrowserRouter>
     </div>

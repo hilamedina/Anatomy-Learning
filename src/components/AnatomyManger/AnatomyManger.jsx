@@ -7,14 +7,13 @@ import { getOrganInfo } from '../Data/Data';
 export default function AnatomyManger() {
   const [view, setView] = useState('bodyView');
   const [organName, setOrganName] = useState(undefined);
-  //   const [arrayOfOrgan, setarrayOfOrgan] = useState([]);
+  const [arrayOfOrgans, setarrayOfOrgans] = useState([]);
 
   if (view === 'bodyView') {
     return (
       <Body
         setCurrentOrgan={(organ) => {
           setOrganName(organ);
-
           setView('organView');
         }}
       ></Body>
