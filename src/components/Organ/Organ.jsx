@@ -1,10 +1,15 @@
 import React from 'react';
+import './Organ.css';
 
 export default function Organ(props) {
   return (
     <div>
-      <button onClick={() => props.changeView()}> return to Body</button>
-      {props.organInfo.description}
+      <div className="Organ-Text">{props.organInfo.description}</div>
+      <br />
+      <br />
+      <button className="Button" onClick={() => props.changeView()}>
+        ⮐
+      </button>
     </div>
   );
 }
