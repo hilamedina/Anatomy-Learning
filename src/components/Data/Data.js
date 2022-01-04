@@ -9,6 +9,7 @@ const getData = async () => {
     .then((organsData) => {
       console.log('got response');
       //use what we get in axios.get
+      // setOrgans(organsDatas.data);
       organs = organsData.data;
     })
     .catch((error) => {

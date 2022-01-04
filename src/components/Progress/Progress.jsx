@@ -1,6 +1,10 @@
-const ProgressBar = (props) => {
-  const { bgcolor, completed } = props;
-
+const ProgressBar = ({
+  bgcolor,
+  completed,
+  arrayOfOrgans,
+  onDelete,
+  returnToBody,
+}) => {
   const containerStyles = {
     height: 20,
     width: '50%',
@@ -22,12 +26,29 @@ const ProgressBar = (props) => {
     color: 'purple',
     fontWeight: 'bold',
   };
-
+  console.log('hila', arrayOfOrgans);
   return (
-    <div style={containerStyles}>
-      <div style={fillerStyles}>
-        <span style={labelStyles}>{`${completed}%`}</span>
+    <div>
+      <div style={containerStyles}>
+        <div style={fillerStyles}>
+          <span style={labelStyles}>{`${completed}%`}</span>
+        </div>
       </div>
+      <br />
+      <h1> done orangs</h1>
+      <div>
+        <div>
+          {arrayOfOrgans.map((txt) => (
+            <p key={txt}>
+              <button onClick={() => onDelete(txt)}>␡</button>
+              {txt}
+            </p>
+          ))}
+        </div>
+      </div>
+      <button className="Button" onClick={() => returnToBody()}>
+        ⮐
+      </button>
     </div>
   );
 };

@@ -1,51 +1,69 @@
 import React from 'react';
 import Body from '../Body/Body';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Organ from '../Organ/Organ';
 import { getOrganInfo } from '../Data/Data';
+import Progress from '../Progress/Progress';
 
 export default function AnatomyManger() {
   const [view, setView] = useState('bodyView');
   const [organName, setOrganName] = useState(undefined);
   const [arrayOfOrgans, setarrayOfOrgans] = useState([]);
+  const [progressState, setprogressState] = useState(0);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log(arrayOfOrgans);
+  }, [arrayOfOrgans]);
 
   const organArray = (organ) => {
-    sivan.push(organ);
-    console.log(sivan);
-    // setarrayOfOrgans((prevState) => {
-    //   [...prevState, organ];
-    //   console.log(arrayOfOrgans);
-    // return arrayOfOrgans;
+    arrayOfOrgans.push(organ);
+    setarrayOfOrgans(arrayOfOrgans);
+    // setarrayOfOrgans([...arrayOfOrgans, organ]);
 
-    // console.log(arrayOfOrgans);
+    setprogressState((arrayOfOrgans.length / 12) * 100);
+  };
+  const setCurrentOrgan = (organ) => {
+    setOrganName(organ);
+    organArray(organ);
+    console.log('setcurrent', arrayOfOrgans);
+    setView('organView');
   };
 
   if (view === 'bodyView') {
+    return <Body setCurrentOrgan={setCurrentOrgan}></Body>;
+  }
+  if (view === 'progressView') {
     return (
-      <Body
-        setCurrentOrgan={(organ) => {
-          setOrganName(organ);
-          organArray([...sivan, organ]);
-          // setarrayOfOrgans((prevState) => {
-          //   [...prevState, organ];
-          // });
-          // console.log(prevState);
-          // console.log(arrayOfOrgans);
-          setView('organView');
+      <Progress
+        returnToBody={() => {
+          setView('bodyView');
         }}
-      ></Body>
+        onDelete={(organ) => {
+          let arrayOfOrgansCopy = [...arrayOfOrgans];
+          const index = arrayOfOrgansCopy.findIndex((organName) => {
+            console.log('dudi', organ);
+            return organName == organ;
+          });
+          console.log('dudi', index);
+          arrayOfOrgansCopy.splice(index, 1);
+          setarrayOfOrgans(arrayOfOrgansCopy);
+        }}
+        arrayOfOrgans={arrayOfOrgans}
+        completed={progressState}
+      ></Progress>
     );
   } else {
     return (
       <Organ
-        changeView={() => {
-          setView('bodyView');
+        changeView={(view) => {
+          setView(view);
         }}
         organInfo={getOrganInfo(organName)}
       />
     );
   }
-
-  //   useEffect(() => {}, []);
-  //   return <div></div>;
 }
+
+//   useEffect(() => {}, []);
+//   return <div></div>;
