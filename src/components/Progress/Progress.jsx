@@ -1,5 +1,8 @@
+import { AiFillDelete } from 'react-icons/ai';
+import { BsArrowReturnLeft } from 'react-icons/bs';
+import './Progress.css';
 const ProgressBar = ({
-  bgcolor,
+  // bgcolor,
   completed,
   arrayOfOrgans,
   onDelete,
@@ -7,7 +10,7 @@ const ProgressBar = ({
 }) => {
   const containerStyles = {
     height: 20,
-    width: '50%',
+    width: '30%',
     backgroundColor: '#e0e0de',
     borderRadius: 50,
     margin: '10rem auto 5rem auto',
@@ -16,19 +19,21 @@ const ProgressBar = ({
   const fillerStyles = {
     height: '100%',
     width: `${completed}%`,
-    backgroundColor: bgcolor,
+    backgroundColor: 'red',
     borderRadius: 'inherit',
     textAlign: 'right',
   };
+  // bgcolor
 
   const labelStyles = {
     padding: 5,
-    color: 'purple',
+    color: 'black',
     fontWeight: 'bold',
   };
   console.log(arrayOfOrgans);
   return (
     <div className="Progress-Div">
+      <h1 className="Header"> Organs that you learn</h1>
       <div style={containerStyles}>
         <div style={fillerStyles}>
           <span style={labelStyles}>{`${completed}%`}</span>
@@ -36,19 +41,24 @@ const ProgressBar = ({
       </div>
       <br />
       <div className="Map-Div">
-        <h1> You Learn</h1>
-        <div>
+        <div className="Text-Container">
           {arrayOfOrgans.map((txt) => (
-            <p key={txt}>
-              <button onClick={() => onDelete(txt)}>␡</button>
-              {txt}
-            </p>
+            <div className="text">
+              <p key={txt}>
+                <button className="Delete-Button" onClick={() => onDelete(txt)}>
+                  <AiFillDelete />
+                </button>
+                {txt}
+              </p>
+            </div>
           ))}
         </div>
       </div>
-      <button className="Button" onClick={() => returnToBody()}>
-        ⮐
-      </button>
+      <div Button-Wrapper>
+        <button className="Button-R" onClick={() => returnToBody()}>
+          <BsArrowReturnLeft className="Icon-Of" />
+        </button>
+      </div>
     </div>
   );
 };
