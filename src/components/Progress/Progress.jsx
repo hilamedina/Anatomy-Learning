@@ -10,7 +10,7 @@ const ProgressBar = ({
     width: '50%',
     backgroundColor: '#e0e0de',
     borderRadius: 50,
-    margin: 50,
+    margin: '10rem auto 5rem auto',
   };
 
   const fillerStyles = {
@@ -26,7 +26,7 @@ const ProgressBar = ({
     color: 'purple',
     fontWeight: 'bold',
   };
-
+  console.log(arrayOfOrgans);
   return (
     <div className="Progress-Div">
       <div style={containerStyles}>

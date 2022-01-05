@@ -1,13 +1,14 @@
 import React from 'react';
 import './Organ.css';
+import { AiFillDelete } from 'react-icons/ai';
 
 export default function Organ(props) {
   return (
     <div className="Organ-Body">
       <div className="Organ-Text">{props.organInfo.description}</div>
-      <div>
-        <a href={props.organInfo.url}></a>
-      </div>
+      <a target="_blank" href={props.organInfo.url}>
+        link
+      </a>
       <br />
       <br />
       <div className="Button-Div">
@@ -18,7 +19,7 @@ export default function Organ(props) {
           className="Button"
           onClick={() => props.changeView('progressView')}
         >
-          ䷢
+          delete <AiFillDelete />
         </button>
       </div>
     </div>
