@@ -18,7 +18,7 @@ A simple app for Anatomy learning
 - react-circular-progressbar
 
 
-## :rocket: Contributing
+
 
 
 
