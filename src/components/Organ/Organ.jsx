@@ -5,6 +5,7 @@ export default function Organ(props) {
   return (
     <div className="Organ-Body">
       <div className="Organ-Text">{props.organInfo.description}</div>
+      <div>{props.organInfo.url}</div>
       <br />
       <br />
       <div className="Button-Div">
