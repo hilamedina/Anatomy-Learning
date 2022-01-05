@@ -7,15 +7,17 @@ export default function Organ(props) {
       <div className="Organ-Text">{props.organInfo.description}</div>
       <br />
       <br />
-      <button className="Button" onClick={() => props.changeView('bodyView')}>
-        ⮐
-      </button>
-      <button
-        className="Button"
-        onClick={() => props.changeView('progressView')}
-      >
-        ䷢
-      </button>
+      <div className="Button-Div">
+        <button className="Button" onClick={() => props.changeView('bodyView')}>
+          ⮐
+        </button>
+        <button
+          className="Button"
+          onClick={() => props.changeView('progressView')}
+        >
+          ䷢
+        </button>
+      </div>
     </div>
   );
 }

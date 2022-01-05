@@ -1,17 +1,33 @@
 .Organ-Body{
     overflow: scroll;
+    height:100%;
+    width:90%;
+    margin:auto;
+    position: relative;
 }
 .Organ-Text{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
+    font-size:18px;
     margin:0.5rem;
     line-height: 2.5rem;
 
+}
+.Button-Div{
+    bottom: 3rem;
+    left:35rem;
+    position:absolute ;
+    display:flex;
+    justify-content: center; 
+    align-items: center;  
 
 }
 .Button{
-    width:40px;
+   vertical-align: middle;
+    margin: 1rem;
+    padding:1rem;
     height:20px;
+    width:5rem;
     border:none;
-    background-color: whitesmoke;
+    border-radius: 1.5rem;
+    background-color: #ffedd8;
 }

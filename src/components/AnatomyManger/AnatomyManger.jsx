@@ -9,7 +9,7 @@ export default function AnatomyManger() {
   const [view, setView] = useState('bodyView');
   const [organName, setOrganName] = useState(undefined);
   const [arrayOfOrgans, setarrayOfOrgans] = useState([]);
-  const [progressState, setprogressState] = useState(0);
+  // const [progressState, setprogressState] = useState(0);
 
   useEffect(() => {
     // Update the document title using the browser API
@@ -21,7 +21,7 @@ export default function AnatomyManger() {
     setarrayOfOrgans(arrayOfOrgans);
     // setarrayOfOrgans([...arrayOfOrgans, organ]);
 
-    setprogressState((arrayOfOrgans.length / 12) * 100);
+    // setprogressState((arrayOfOrgans.length / 12) * 100);
   };
   const setCurrentOrgan = (organ) => {
     setOrganName(organ);
@@ -50,7 +50,8 @@ export default function AnatomyManger() {
           setarrayOfOrgans(arrayOfOrgansCopy);
         }}
         arrayOfOrgans={arrayOfOrgans}
-        completed={progressState}
+        // completed={progressState}
+        completed={(arrayOfOrgans.length / 12) * 100}
       ></Progress>
     );
   } else {

@@ -26,17 +26,17 @@ const ProgressBar = ({
     color: 'purple',
     fontWeight: 'bold',
   };
-  console.log('hila', arrayOfOrgans);
+
   return (
-    <div>
+    <div className="Progress-Div">
       <div style={containerStyles}>
         <div style={fillerStyles}>
           <span style={labelStyles}>{`${completed}%`}</span>
         </div>
       </div>
       <br />
-      <h1> done orangs</h1>
-      <div>
+      <div className="Map-Div">
+        <h1> done orangs</h1>
         <div>
           {arrayOfOrgans.map((txt) => (
             <p key={txt}>

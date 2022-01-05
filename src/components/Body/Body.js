@@ -1,8 +1,5 @@
 import './Body.css';
 import React from 'react';
-// import { getOrganInfo } from '../Data/Data';
-// import Organ from '../Organ/Organ';
-// import axios from 'axios';
 
 const Body = (props) => {
   console.log('render body');
@@ -15,7 +12,6 @@ const Body = (props) => {
           width="250mm"
           height="180mm"
           viewBox="0 0 297 210"
-          // {...props}
         >
           <path fill="#fffffd" d="M.577.166h297v210.988h-297z" />
           <g onClick={() => props.setCurrentOrgan('pancreas')}>
