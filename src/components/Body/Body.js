@@ -2,7 +2,6 @@ import './Body.css';
 import React from 'react';
 
 const Body = (props) => {
-  console.log('render body');
   return (
     <div>
       <div className="Organs">

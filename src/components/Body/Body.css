@@ -12,4 +12,15 @@ g:hover {
 g {
     opacity:1;
 }
+@media (max-width: 700px) {
+    .Organs{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100%; 
+        height:100%;
+        margin: 0 auto; 
+        margin-bottom:150px;
+    }   
+    }
 
