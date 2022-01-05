@@ -36,7 +36,7 @@ const ProgressBar = ({
       </div>
       <br />
       <div className="Map-Div">
-        <h1> done orangs</h1>
+        <h1> You Learn</h1>
         <div>
           {arrayOfOrgans.map((txt) => (
             <p key={txt}>

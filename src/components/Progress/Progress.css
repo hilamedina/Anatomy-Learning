@@ -1,3 +1,7 @@
+.Progress-Div{
+    display:flex;
+    
+}
 .Map-Div{
     display:flex;
     flex-direction: row;

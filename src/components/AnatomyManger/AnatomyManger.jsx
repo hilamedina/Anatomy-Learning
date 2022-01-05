@@ -65,6 +65,3 @@ export default function AnatomyManger() {
     );
   }
 }
-
-//   useEffect(() => {}, []);
-//   return <div></div>;
