@@ -14,14 +14,9 @@ function Home() {
     <div className="Home">
       <BrowserRouter>
         <Navbar></Navbar>
-        <Route exact path="/" exact component={Homepage}></Route>
-        <Route
-          exact
-          path="/AnatomyManger"
-          exact
-          component={AnatomyManger}
-        ></Route>
-        <Route exact path="/Progress" exact component={Progress}></Route>
+        <Route path="/" exact component={Homepage}></Route>
+        <Route exact path="/AnatomyManger" component={AnatomyManger}></Route>
+        <Route path="/Progress" exact component={Progress}></Route>
         {/* <AnatomyManger /> */}
       </BrowserRouter>
     </div>

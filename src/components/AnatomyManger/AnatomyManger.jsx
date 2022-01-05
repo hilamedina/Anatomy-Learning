@@ -33,10 +33,10 @@ export default function AnatomyManger() {
         onDelete={(organ) => {
           let arrayOfOrgansCopy = [...arrayOfOrgans];
           const index = arrayOfOrgansCopy.findIndex((organName) => {
-            console.log('dudi', organ);
-            return organName == organ;
+            console.log(organ);
+            return organName === organ;
           });
-          console.log('dudi', index);
+          console.log(index);
           arrayOfOrgansCopy.splice(index, 1);
           setarrayOfOrgans(arrayOfOrgansCopy);
         }}

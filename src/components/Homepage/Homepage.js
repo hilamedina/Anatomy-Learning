@@ -6,7 +6,7 @@ export default function Homepage() {
   return (
     <div className="Homepage-Div">
       <div className="Image-Homepage">
-        <img src={Body}></img>
+        <img src={Body} alt="human"></img>
       </div>
       <div className="Text-Homepage">
         <br />

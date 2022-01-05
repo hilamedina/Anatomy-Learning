@@ -6,8 +6,8 @@ export default function Organ(props) {
   return (
     <div className="Organ-Body">
       <div className="Organ-Text">{props.organInfo.description}</div>
-      <a target="_blank" href={props.organInfo.url}>
-        link
+      <a target="_blank" rel="noreferrer noopene" href={props.organInfo.url}>
+        youtube link
       </a>
       <br />
       <br />
