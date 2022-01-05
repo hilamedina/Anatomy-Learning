@@ -1,6 +1,6 @@
 import React from 'react';
 import Body from '../images/Body.png';
-import './Homepage.css';
+// import './Homepage.css';
 
 export default function Homepage() {
   return (
