@@ -1,7 +1,7 @@
 import React from 'react';
 import './Organ.css';
-import { AiFillDelete } from 'react-icons/ai';
-import { BsArrowReturnLeft } from 'react-icons/bs';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 export default function Organ(props) {
   return (
@@ -14,13 +14,13 @@ export default function Organ(props) {
       <br />
       <div className="Button-Div">
         <button className="Button" onClick={() => props.changeView('bodyView')}>
-          <BsArrowReturnLeft className="Icon-Of" />
+          <AiOutlineArrowLeft className="Icon-Of" />
         </button>
         <button
           className="Button"
           onClick={() => props.changeView('progressView')}
         >
-          <AiFillDelete className="Icon-Of" />
+          <AiOutlineArrowRight className="Icon-Of" />
         </button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { AiFillDelete } from 'react-icons/ai';
-import { BsArrowReturnLeft } from 'react-icons/bs';
+
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 import './Progress.css';
 const ProgressBar = ({
   // bgcolor,
@@ -33,7 +34,7 @@ const ProgressBar = ({
   console.log(arrayOfOrgans);
   return (
     <div className="Progress-Div">
-      <h1 className="Header"> Organs that you learn</h1>
+      <h1 className="Header"> Completed organs</h1>
       <div style={containerStyles}>
         <div style={fillerStyles}>
           <span style={labelStyles}>{`${completed}%`}</span>
@@ -56,7 +57,7 @@ const ProgressBar = ({
       </div>
       <div Button-Wrapper>
         <button className="Button-R" onClick={() => returnToBody()}>
-          <BsArrowReturnLeft className="Icon-Of" />
+          <AiOutlineArrowLeft className="Icon-Of" />
         </button>
       </div>
     </div>
