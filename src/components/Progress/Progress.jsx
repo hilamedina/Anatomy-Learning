@@ -1,5 +1,4 @@
 import { AiFillDelete } from 'react-icons/ai';
-
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import './Progress.css';
 const ProgressBar = ({
